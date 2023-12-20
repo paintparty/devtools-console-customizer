@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <h1>DevTools Console Customizer</h1>
+    <p>Customize the font and background-color of your DevTools Console.</p>
+    <div id="options-form">
+
+        <section class="outer">
+            <p>Specify a font-family name. The font must be installed on your system, and the spelling must be correct (capitalization, spacing, etc.). </p>
+            <section class="font-family-outer">
+                  <section class="font-family">
+                      <label for="font-family">Font Family</label>
+                      <input type="text" name="font-family" id="font-family" class="input-field">
+                  </section>
+                  <button id="font-family-reset">Reset</button>
+            </section>
+        </section>
+        
+        <section class="outer background-color-section">
+            <p>To customize the background color, choose a theme or specify a custom hex color.</p>
+            <div class="color-fields-outer">
+                  <div class="color-fields">
+                        <section class="theme">
+                            <label for="theme">Theme</label>
+                            <div class="theme-buttons">
+                                    <button style="background-color:#f7f7f7;" value="#f7f7f7" class="theme-mood-light" name="Alabaster Light"></option>
+                                    <button style="background-color:#f9f8f5;" value="#f9f8f5" class="theme-mood-light" name="Zenburn Light"></option>
+                                    <button style="background-color:#f5f9f9;" value="#f5f9f9" class="theme-mood-light" name="Degas Light"></option>
+                                    <button style="background-color:#fdf6e3;" value="#fdf6e3" class="theme-mood-light" name="Solarized Light"></option>
+                                    <button style="background-color:#ffffff;" value="#ffffff" class="theme-mood-light" name="Monokai Light"></option>
+                                    <button style="background-color:#ffffff;" value="#ffffff" class="theme-mood-light" name="Neutral Light"></option>
+                                    <button style="background-color:#0e1415;" value="#0e1415" class="theme-mood-dark" name="Alabaster Dark"></option>
+                                    <button style="background-color:#3f3f3f;" value="#3f3f3f" class="theme-mood-dark" name="Zenburn Dark"></option>
+                                    <button style="background-color:#363f4e;" value="#363f4e" class="theme-mood-dark" name="Degas Dark"></option>
+                                    <button style="background-color:#002b36;" value="#002b36" class="theme-mood-dark" name="Solarized Dark"></option>
+                                    <button style="background-color:#2d2a2e;" value="#2d2a2e" class="theme-mood-dark" name="Monokai Dark"></option>
+                                    <button style="background-color:#000000;" value="#000000" class="theme-mood-dark" name="Neutral Dark"></option>
+                                    <!-- <button style="background-color:#f7f7f7;" value="#f7f7f7" name="Alabaster Light">Alabaster</option>
+                                    <button style="background-color:#0e1415;" value="#0e1415" name="Alabaster Dark">Alabaster</option>
+                                    <button style="background-color:#f9f8f5;" value="#f9f8f5" name="Zenburn Light">Zenburn</option>
+                                    <button style="background-color:#3f3f3f;" value="#3f3f3f" name="Zenburn Dark">Zenburn</option>
+                                    <button style="background-color:#f5f9f9;" value="#f5f9f9" name="Degas Light">Degas</option>
+                                    <button style="background-color:#363f4e;" value="#363f4e" name="Degas Dark">Degas</option>
+                                    <button style="background-color:#fdf6e3;" value="#fdf6e3" name="Solarized Light">Solarized</option>
+                                    <button style="background-color:#002b36;" value="#002b36" name="Solarized Dark">Solarized</option>
+                                    <button style="background-color:#ffffff;" value="#ffffff" name="Monokai Light">Monokai</option>
+                                    <button style="background-color:#2d2a2e;" value="#2d2a2e" name="Monokai Dark">Monokai</option>
+                                    <button style="background-color:#ffffff;" value="#ffffff" name="Neutral Light">Neutral</option>
+                                    <button style="background-color:#000000;" value="#000000" name="Neutral Dark">Neutral</option> -->
+                            </div>
+                        </section>
+                        <section class="background-color-outer">
+                              <section class="background-color">
+                                  <label for="background-color">Hex Color</label>
+                                  <div>
+                                      <input type="text" name="background-color" id="background-color" class="input-field">
+                                  </div>
+                                  <div id="background-color-swatch">
+                                  </div>
+                                  <div id="background-color-swatch-theme-label"></div>
+                              </section>
+                              <button id="background-color-reset">Reset</button>
+                        </section>
+                  </div>
+            </div>
+        </section>
+
+        <section id="save-options">
+            <button id="save" disabled="true">Save</button>
+            <div id="status"></div>
+        </section>
+    </div>
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>
