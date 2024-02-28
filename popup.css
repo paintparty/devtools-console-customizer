@@ -253,7 +253,7 @@ section.background-color label {
    display: flex;
    align-items: center;
    font-size: 14px;
-   font-weight: 500px;
+   font-weight: 600;
 }
 
 #save {
@@ -271,7 +271,8 @@ section.background-color label {
 }
 
 #save:hover {
-    color: #3e92ff; 
+    /* color: #3e92ff;  */
+    background-color: #ededed;
 }
 
 #save:disabled {
@@ -279,19 +280,31 @@ section.background-color label {
     color: #a7a7a7;
 }
 
-#background-color-reset, #font-family-reset {
+.reset-button {
+    border-radius: 999px;
     border: none;
     background-image: none;
     background-color: transparent;
-    padding: 0;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    padding: 0.6em 1.25em 0.625em 0.675em;
+    gap: 0.4em;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* color: #005dd7; */
     /* color: #005dd7; */
 }
 
-#background-color-reset:hover, #font-family-reset:hover {
-    color: #959595;
+.reset-button:hover {
+    /* color: #959595; */
+    background-color: #ededed;
+}
+
+.reset-icon {
+    font-size: 2.0em;
+    line-height: 16px;
+    transform: translateY(-3px) rotate(323deg);
+    text-decoration: none;
+    opacity: 0.9;
 }
 
 /* #font-family:focus-visible {

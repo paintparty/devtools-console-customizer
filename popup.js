@@ -1,6 +1,7 @@
 (function(window, document) {
 
   const fontFamilyField = document.getElementById('font-family');
+  const fontFamilyResetButton = document.getElementById('font-family-reset');
   const themeButtons = document.querySelectorAll('.theme-buttons button');
   const themeHexColors = Array.from(themeButtons).map(btn => btn.value);
   const themeHexColorsObj = Object.fromEntries(Array.from(themeButtons).map(btn => [btn.value, btn.name]));
@@ -14,7 +15,7 @@
       const fontFamily = fontFamilyField.value;
       const backgroundColor = backgroundColorField.value;
       function updateStatus() {
-          status.textContent = '✅ Options saved.';
+          status.textContent = '☑ Options saved. Please close and reopen devtools to see changes.';
       }
 
       chrome.storage.sync.set({
@@ -30,6 +31,25 @@
     fontFamilyField.style.fontFamily = fstack;
   }
 
+  fontFamilyResetButton.addEventListener('click', e => {
+    let v = "menlo, monospace";
+    fontFamilyField.value = v;
+    // Enable Save button if value is different than localStorage. 
+    chrome.storage.sync.get({
+        fontFamily: "menlo, monospace",
+        consoleBackgroundColor: "#ffffff"
+    }, items=>{
+      let isFontFamilyChange = (items.fontFamily !== v);
+      let isBackgroundColorChange = (items.consoleBackgroundColor !== backgroundColorField.value);
+      let isNoChange = !isFontFamilyChange && !isBackgroundColorChange;
+      console.log(
+       "!isFontFamilyChange && !isBackgroundColorChange", isNoChange,
+       "isFontFamilyChange", isFontFamilyChange,
+       "isBackgroundColorChange", isBackgroundColorChange);
+      document.getElementById('save').disabled = isNoChange;
+    });
+  });
+
   fontFamilyField.addEventListener('keyup', e => {
     let v = e.target.value
     setFontFamilyFieldStyle(v);
@@ -42,7 +62,10 @@
       let isFontFamilyChange = (items.fontFamily !== v);
       let isBackgroundColorChange = (items.consoleBackgroundColor !== backgroundColorField.value);
       let isNoChange = !isFontFamilyChange && !isBackgroundColorChange;
-      console.log("change", isNoChange);
+      console.log(
+       "!isFontFamilyChange && !isBackgroundColorChange", isNoChange,
+       "isFontFamilyChange", isFontFamilyChange,
+       "isBackgroundColorChange", isBackgroundColorChange);
       document.getElementById('save').disabled = isNoChange;
     });
   });
@@ -130,8 +153,6 @@
         backgroundColorFieldEventHandler(resetColor);
       });
 
-  document.getElementById('font-family-reset')
-      .addEventListener('click', () => fontFamilyField.value = "menlo, monospace");
 
   // Initial settings of the UI.
   chrome.storage.sync.get({
