@@ -1,5 +1,5 @@
-# Chrome Devtools Console Customizer
-This is a Chrome extension for customizing the font and background-color of the Chrome DevTools Console.
+# Devtools Console Customizer
+This is a Chrome extension for customizing the font and background-color of the DevTools Console.
 
 <br>
 
