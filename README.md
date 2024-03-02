@@ -1,7 +1,7 @@
 # Devtools Console Customizer
 This is a Chrome extension for customizing the font and background-color of the DevTools Console.
 
-Install via <a href="https://chromewebstore.google.com/detail/kjkmaoifmppnclfacnmbimcckfgekmod" target="_blank">the official extension page →</a>
+<a href="https://chromewebstore.google.com/detail/kjkmaoifmppnclfacnmbimcckfgekmod" target="_blank">Install via the official extension page →</a>
 
 Currently, this extension only works for Chromium browsers. If you using Firefox, you can still achieve the same customizations by following the instructions outlined in [Firefox Developer Tools section](#setting-the-background-color-and-font-in-firefox-developer-tools) below.
 
@@ -30,7 +30,9 @@ Now you can open the Devtools Console Customizer popup and customize the font-fa
 <br>
 
 ### Setting the background color and font in Firefox Developer Tools
-In Firefox, this can be done by opening Firefox Developer Tools on any page, just right-click and select **Inspect**. Then click on the *`•••`* button in the top right of this panel and select **Settings** to get to the Settings panel. You should see a **Themes** section which will let you select `Light` or `Dark`.
+Currently, this extension only available for Chromium browsers. You can, however, customize the font-family and background color of the dev console in **Firefox**, although this has to be done manually.
 
-Currently, this extension only works for Chromium browsers. You can, however, customize the font-family and background color of the dev console in **Firefox**, although this has to be done manually. Fireworks provides <a href="" target="_blank">a starter **`userContent.css`** file</a> to make this easy. You will need to place this file in the correct directory on your computer so that Firefox can read it when it launches. Follow the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">instructions outlined here</a> to locate this directory. Please note that file, which is necessary file for customizing the Developer Tools console in FireFox, is called **`userContent.css`**,  ***NOT*** `userChrome.css` (as mentioned in the linked tutorial).  You can put this in the proper directory as explained in the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">linked tutorial</a> and change it as needed to align with your chosen theme. Remember to quit and restart Firefox if you make any changes or updates to this **`userContent.css`** file.
+First, open the Firefox Developer Tools on any page - just right-click and select **Inspect**. Then click on the *`•••`* button in the top right of this panel and select **Settings** to get to the Settings panel. You should see a **Themes** section which will let you select `Light` or `Dark`.
+
+You can achieve the equivalent customizations to the console background-color and font-family by providing a special `.css` file. This repo provides <a href="" target="_blank">a starter **`userContent.css`** file</a> to make this easy. You will need to place this file in the correct directory on your computer so that Firefox can read it when it launches. Follow the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">instructions outlined here</a> to locate this directory. Please note that file, which is necessary for customizing the Developer Tools console in FireFox, is called **`userContent.css`**,  ***NOT*** `userChrome.css` (as mentioned in the linked tutorial).  You can put this in the proper directory as explained in the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">linked tutorial</a> and change it as needed to align with your chosen theme. Remember to quit and restart Firefox if you make any changes or updates to this **`userContent.css`** file.
 
