@@ -3,7 +3,7 @@ This is a Chrome extension for customizing the font and background-color of the 
 
 <a href="https://chromewebstore.google.com/detail/kjkmaoifmppnclfacnmbimcckfgekmod" target="_blank">Install via the official extension page →</a>
 
-Currently, this extension only works for Chromium browsers. If you using Firefox, you can still achieve the same customizations by following the instructions outlined in [Firefox Developer Tools section](#setting-the-background-color-and-font-in-firefox-developer-tools) below.
+Currently, this extension only works for Chrome browsers. If you using Firefox, you can still achieve the same customizations by following the instructions outlined in [Firefox Developer Tools section](#setting-the-background-color-and-font-in-firefox-developer-tools) below.
 
 <br>
 
@@ -19,10 +19,10 @@ Most pretty-printing utilities designed to support syntax-coloring (theming) for
 
 <br>
 
-### Setting the background color and font in Chromium DevTools 
+### Setting the background color and font in Chrome DevTools 
 If you are using Firefox, ignore this section and follow [the instructions in the following section](#setting-the-background-color-and-font-in-firefox-developer-tools).
 
-First, you will need to set the general appearance of your Chromium browser's DevTools UI to "Light" or "Dark", depending on whether you are using a light or dark Fireworks theme. This can be done by opening DevTools on any page, clicking the **Settings** gear icon button, and then **Preferences** > **Appearance** > **Theme**. Official instructions <a href="https://developer.chrome.com/docs/devtools/settings" target="_blank">here</a>.
+First, you will need to set the general appearance of your Chrome browser's DevTools UI to "Light" or "Dark", depending on whether you are using a light or dark Fireworks theme. This can be done by opening DevTools on any page, clicking the **Settings** gear icon button, and then **Preferences** > **Appearance** > **Theme**. Official instructions <a href="https://developer.chrome.com/docs/devtools/settings" target="_blank">here</a>.
 
 Now you can open the Devtools Console Customizer popup and customize the font-family and background color. After making a change via the extension, you will need to close and reopen DevTools. If you are switching from a light to dark theme or vice-versa, remember to also reset the general appearance of DevTools in **Settings** > **Preferences** > **Appearance** > **Theme**, as described above.
 
@@ -30,7 +30,7 @@ Now you can open the Devtools Console Customizer popup and customize the font-fa
 <br>
 
 ### Setting the background color and font in Firefox Developer Tools
-Currently, this extension only available for Chromium browsers. You can, however, customize the font-family and background color of the dev console in **Firefox**, although this has to be done manually.
+Currently, this extension only available for Chrome. You can, however, customize the font-family and background color of the dev console in **Firefox**, although this has to be done manually.
 
 First, open the Firefox Developer Tools on any page - just right-click and select **Inspect**. Then click on the *`•••`* button in the top right of this panel and select **Settings** to get to the Settings panel. You should see a **Themes** section which will let you select `Light` or `Dark`.
 
