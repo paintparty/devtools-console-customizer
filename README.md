@@ -10,7 +10,7 @@ Currently, this extension only works for Chrome browsers. If you using Firefox, 
 ![](./graphics/devtools-console-customizer-screen-recording-v2.gif)
 
 ## Why?
-Because you may want the appearance of things printed to the browser dev console to more closely match the theme in your source-code editor.
+Because you may want the appearance of things printed to the browser dev console to more closely match the theme in your source code editor.
 
 <br>
 
@@ -34,5 +34,5 @@ Currently, this extension only available for Chrome. You can, however, customize
 
 First, open the Firefox Developer Tools on any page - just right-click and select **Inspect**. Then click on the *`•••`* button in the top right of this panel and select **Settings** to get to the Settings panel. You should see a **Themes** section which will let you select `Light` or `Dark`.
 
-You can achieve the equivalent customizations to the console background-color and font-family by providing a special `.css` file. This repo provides <a href="" target="_blank">a starter **`userContent.css`** file</a> to make this easy. You will need to place this file in the correct directory on your computer so that Firefox can read it when it launches. Follow the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">instructions outlined here</a> to locate this directory. Please note that file, which is necessary for customizing the Developer Tools console in FireFox, is called **`userContent.css`**,  ***NOT*** `userChrome.css` (as mentioned in the linked tutorial).  You can put this in the proper directory as explained in the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">linked tutorial</a> and change it as needed to align with your chosen theme. Remember to quit and restart Firefox if you make any changes or updates to this **`userContent.css`** file.
+You can achieve the equivalent customizations to the console background-color and font-family by providing a special `.css` file. This repo provides <a href="" target="_blank">a starter **`userContent.css`** file</a> to make this easy. You will need to place this file in the correct directory on your computer so that Firefox can read it when it launches. Follow the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">instructions outlined here</a> to locate this directory. Please note that this file, which is necessary for customizing the Developer Tools console in FireFox, is called **`userContent.css`**,  ***NOT*** `userChrome.css` (as mentioned in the linked tutorial).  You can put this in the proper directory as explained in the <a href="https://www.userchrome.org/how-create-userchrome-css.html" target="_blank">linked tutorial</a> and change it as needed to align with your chosen theme. Remember to quit and restart Firefox if you make any changes or updates to this **`userContent.css`** file.
 
